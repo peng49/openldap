@@ -1,13 +1,12 @@
-### Step 1: Update Debian server
-For setups done on a clean installation of Debian Server, ensure the system is updated and upgraded.
-```angular2html
+### Step 1: 更新系统源
+在一个全新的系统安装ldap,请确保系统已更新和升级
+```
 sudo apt -y update
 sudo apt -y upgrade
 sudo reboot
 ```
 
-### Step 2: Install OpenLDAP on Debian 10 Buster
-After system update and successful reboot, we’re set to install OpenLDAP Server on Debian package from our system default repositories.
+### Step 2: 安装OpenLDAP
 
 > sudo apt -y install slapd ldap-utils
 
@@ -47,7 +46,7 @@ Re-enter new password:
 {SSHA}5D94oKzVyJYzkCq21LhXDZFNZpPQD9uE
 Create ldif file for adding users.
 
-> nano ldapusers.ldif
+> vim ldapusers.ldif
 ```
 dn: uid=jmutai,ou=people,dc=computingforgeeks,dc=com
 objectClass: inetOrgPerson
@@ -111,7 +110,8 @@ If you encounter errors during installation, run:
 
 sudo apt -f install
 sudo dpkg -i ldap-account-manager_6.8-1_all.deb
-Step 6: Configure LDAP Account Manager
+
+### Step 6: Configure LDAP Account Manager
 Access  LDAP Account Manager web interface from a trusted machine network on
 
 http://(server’s hostname or IP address)/lam
@@ -140,7 +140,7 @@ You can also enable other available account types you wish to use. User and Grou
 
 When done with the settings, click the Save button at the bottom of the page.
 
-Step 7: Add user accounts and groups with LDAP Account Manager
+### Step 7: Add user accounts and groups with LDAP Account Manager
 Login with the accountadmin to LAM dashboard to start managing user accounts and groups.
 
 ldap account manager login interface min
