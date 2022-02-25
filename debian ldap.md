@@ -1,5 +1,7 @@
 [在debian上安装和配置openldap](https://computingforgeeks.com/how-to-install-and-configure-openldap-server-on-debian/)
 
+[How To Setup OpenLDAP Server on Debian 10](https://devconnected.com/how-to-setup-openldap-server-on-debian-10/)
+
 ## 安装
 
 安装openldap和ldap操作工具包
